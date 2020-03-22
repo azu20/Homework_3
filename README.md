@@ -2,7 +2,10 @@
 
 ```
 
-This assignment applies the JavaScript data types discussed this week, functions and objects. This week's homework assignment is to create a password generator website following the criteria the user selects. 
+This assignment applies the JavaScript data types discussed this week,
+functions and objects. This week's homework assignment is to 
+create a password generator website following the criteria 
+the user selects. 
 
 ```
 
