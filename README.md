@@ -1,18 +1,12 @@
 # 03 JavaScript: Password Generator
 
-Create an application that generates a random password based on user-selected criteria. This app will run in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code. It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.
-
-If you are unfamiliar with special characters, take a look at [some examples](https://www.owasp.org/index.php/Password_special_characters).
-
-## User Story
-
-```
-AS AN employee with access to sensitive data
-I WANT to randomly generate a password that meets certain criteria
-SO THAT I can create a strong password that provides greater security
 ```
 
-## Acceptance Criteria
+This assignment applies the JavaScript data types discussed this week, functions and objects. This week's homework assignment is to create a password generator website following the criteria the user selects. 
+
+```
+
+## Assignment criteria:
 
 ```
 GIVEN I need a new, secure password
@@ -32,17 +26,8 @@ WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
 ```
 
-The following image demonstrates the application functionality:
+## Challenges: 
 
-![password generator demo](./Assets/03-javascript-homework-demo.png)
+This assignment was the most challenging yet. The first portion of the assignment was challenging but I was able to complete within a few hours. The second part of the assignment, creating a function to generate a password, I had the hardest time.  I reached out to my brothers, and am so gratefule they were able to tutor me, it took more than 6 hours of tutoring to be able to figure out the second half.  I know there is some opportunity to refactor my code, but breaking the steps down via code, helped me better understand how to acheive the end result. I look forward in reading your feedback. :-)   
 
-## Review
 
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.

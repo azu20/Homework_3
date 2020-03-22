@@ -74,20 +74,73 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 function generatePassword(length, upper, lower, numeric, specials) {
-  var characters_for_upper = "ABCDEFGHIJKLMPNOPQRSTUVWXYZ".split();
-  var characters_for_lower = "abcdefghijklmnopqrstuvwxyz".split();
-  var characters_for_numeric = "0123456789".split();
-  var characters_for_specials = "!@#$%^&*()-_=+]}[{;:/.;,/|}]".split();
-  var uppercase_string = "";
-  var lowercase_string = "";
-  var numeric_string   = "";
-  var specials_string  = "";
-  for(var i=1; i<=128; i++){
-      uppercase_string = uppercase_string + characters_for_upper[Math.random() * 100 % characters_for_upper.length ]
-      lowercase_string = lowercase_string + characters_for_lower[Math.random() * 100 % characters_for_lower.length ]
-      numeric_string = numeric_string + characters_for_numeric[Math.random() * 100 % characters_for_numeric.length ]
-      specials_string = specials_string + characters_for_specials[Math.random() * 100 % characters_for_specials.length ]
+ // Possible characters
+var characters_for_upper = Array.from('ABCDEFGHIJKLMPNOPQRSTUVWXYZ');
+var characters_for_lower = Array.from('abcdefghijklmnopqrstuvwxyz');
+var characters_for_numeric = Array.from('0123456789');
+var characters_for_specials = Array.from('!@#$%^&*()-_=+]}[{:.;,/|}]');
+
+// Will hold randomly generated characters of each type
+var uppercase_string = [];
+var lowercase_string = [];
+var numeric_string   = [];
+var specials_string  = [];
+  
+// Generate randomly characters of the max possible size
+ for(var i=1; i<=128; i++){
+   uppercase_string.push( characters_for_upper[parseInt(Math.random()    * characters_for_upper.length)]);
+   lowercase_string.push( characters_for_lower[parseInt(Math.random()    * characters_for_lower.length)]);
+   numeric_string.push(   characters_for_numeric[parseInt(Math.random()  * characters_for_numeric.length)]);
+   specials_string.push(  characters_for_specials[parseInt(Math.random() * characters_for_specials.length)]);
+} 
+
+  var counter = 0; 
+
+  if (upper == true) {
+    counter = counter + 1;
   }
 
-} 
+  if (lower == true) {
+    counter = counter + 1; 
+  }
+
+  if (numeric == true) {
+    counter = counter + 1;
+  }
+  
+  if (specials == true) {
+    counter = counter + 1;
+  }
+
+  var block = parseInt(length / counter);
+
+  var remainder = length % counter; 
+
+  var password = []; 
+
+  console.log(uppercase_string.slice(0,block).join(''));
+
+  if (upper == true) {
+    password.push (uppercase_string.slice(0,block).join('')); 
+  }
+
+  if (lower == true) {
+    password.push(lowercase_string.slice(0,block).join('')); 
+  }
+
+  if (numeric == true) {
+    password.push(numeric_string.slice(0,block).join('')); 
+  }
+
+  if (specials == true) {
+    password.push(specials_string.slice(0,block).join('')); 
+  }
+
+  if (remainder > 0) {
+    password.push(password.slice(0,remainder).join(''));
+  }
+  return password.join(''); 
+}
+
+
   
