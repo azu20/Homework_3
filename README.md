@@ -4,7 +4,7 @@ This Application generates a random password based on user-selected criteria. Th
 
 ## Deployed link:
 
-azu20.github.io/password-generator/
+https://azu20.github.io/Password-Generator/ 
 
 
 ## User Story
